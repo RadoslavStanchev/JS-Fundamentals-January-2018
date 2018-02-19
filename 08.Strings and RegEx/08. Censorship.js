@@ -1,0 +1,8 @@
+function censoredWords(text, arr){
+    for (let str of arr) {
+        let regex = new RegExp(str, 'g')
+        let dashes = '-'.repeat(str.length)
+        text = text.replace(regex, dashes)
+    }
+    console.log(text)
+}
